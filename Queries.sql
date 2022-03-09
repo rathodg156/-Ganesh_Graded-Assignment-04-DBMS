@@ -55,8 +55,7 @@ ORDER BY Distance DESC;
 	-- from the total distance travelled by all passengers without using user variables
 
 SELECT Passenger_name, 
-Distance * 100.0/ (SELECT SUM(Distance) FROM passenger)FROM passenger 
-GROUP BY Distance;
+Distance * 100.0/ (SELECT SUM(Distance) FROM passenger)FROM passenger;
 
 	
 -- 11) Display the distance, price in three categories in table Price

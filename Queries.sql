@@ -25,29 +25,24 @@ AND passenger.Distance = price.Distance;
 -- 7) What is the passenger name and his/her ticket price who travelled in Sitting bus for a
 -- distance of 1000 KMs.				
 SELECT DISTINCT
-	Passenger_name,Price
-	FROM
-	passenger,price WHERE
-	passenger.Bus_Type = price.Bus_Type
-	 && passenger.Distance = price.Distance 
-	 AND
-	 paseenger.Bus_Type = 'Sitting'and
-	 passenger.Distance = 1000;
+Passenger_name,Price
+FROM
+passenger,price WHERE
+passenger.Bus_Type = price.Bus_Type
+&& passenger.Distance = price.Distance 
+AND
+paseenger.Bus_Type = 'Sitting'and
+passenger.Distance = 1000;
     
 
 -- 8) What will be the Sitting and Sleeper bus charge for Pallavi to travel 
 	-- from Bangalore to Panaji?
 SELECT DISTINCT
-   passenger.Bus_Type,price.Price
-   FROM passenger,price
-   WHERE
-   passenger.Bus_Type=price.Bus_Type
-   and
-   passenger.Distance=price.Distance AND
-   passeneger.Passeneger_name='Pallavi'and
-   passenger.Boarding_City='Banglore'
-   and
-   passenger.Destination_City='panaji';
+price.Bus_Type,Price
+FROM 
+passenger,price WHERE (PASSENGER.Distance = PRICE.Distance)
+AND
+passenger.Passenger_name = 'Pallavi';
    
 -- 9) List the distances from the "Passenger" table which are unique 
 	-- (non-repeated distances) in descending order.

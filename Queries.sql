@@ -31,7 +31,7 @@ passenger,price WHERE
 passenger.Bus_Type = price.Bus_Type
 && passenger.Distance = price.Distance 
 AND
-paseenger.Bus_Type = 'Sitting'and
+passenger.Bus_Type = 'Sitting'and
 passenger.Distance = 1000;
     
 
